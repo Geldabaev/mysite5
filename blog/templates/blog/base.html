@@ -15,6 +15,7 @@
             <p class="admin"><a href="admin/">Админ панель</a></p>
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}">Добавить пост</a>
+                <p><a href="{% url 'post_draft' %}">Черновики</a></p>
             {% endif %}
 
         </div>
