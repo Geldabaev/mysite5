@@ -5,7 +5,7 @@ from django.utils import timezone
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 
-
+"registration"
 def index(request):
     posts = MyPublish.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/index.html', {'posts': posts})
